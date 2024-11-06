@@ -48,7 +48,7 @@ async function fetchContent(url) {
         const albumDiv = document.createElement('div');
         albumDiv.classList.add('album');
 
-        //Tilføj albuminformationen til 'albumDiv'
+        //Tilføj albuminformationen til 'albumDiv', lavet med innerhtml
         albumDiv.innerHTML = 
             '<h2>' + album.name + '</h2>' +
             '<p>Artist: <a href="' + album.website + '" target="_blank">' + album.artist + '</a></p>' +
@@ -60,7 +60,7 @@ async function fetchContent(url) {
         const tracklistDiv = document.createElement('div');
         tracklistDiv.classList.add('tracklist');
 
-        //For-loop gennem trackList-arrayet for information om tracks
+         //For-loop gennem trackList-arrayet for information om tracks, lavet med elementer og class
         for (let i = 0; i < album.trackList.length; i++) {
             const track = album.trackList[i];
             //Laver en paragraf i html
